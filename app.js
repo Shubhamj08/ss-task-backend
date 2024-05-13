@@ -5,7 +5,7 @@ const CommentController = require('./src/controllers/CommentController.js');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3001' }))
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use('/comments', CommentController);
