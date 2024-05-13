@@ -1,7 +1,7 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import CommentController from './controllers/CommentController.js';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const CommentController = require('./controllers/CommentController.js');
 
 const app = express();
 
@@ -19,4 +19,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-export default app;
+module.exports = app;

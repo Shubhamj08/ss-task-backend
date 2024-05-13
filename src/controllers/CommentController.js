@@ -1,5 +1,5 @@
-import express from 'express';
-import CommentService from '../services/CommentService.js';
+const express = require('express');
+const CommentService = require('../services/CommentService.js');
 
 const router = express.Router();
 
@@ -45,4 +45,4 @@ router.delete('/:id', (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

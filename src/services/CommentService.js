@@ -1,4 +1,4 @@
-import Item from "../models/Comment.js";
+const Item = require("../models/Comment.js");
 
 
 class CommentService{
@@ -47,4 +47,4 @@ class CommentService{
 }
 
 
-export default new CommentService();
+module.exports = new CommentService();
