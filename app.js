@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const CommentController = require('./controllers/CommentController.js');
+const CommentController = require('./src/controllers/CommentController.js');
 
 const app = express();
 
