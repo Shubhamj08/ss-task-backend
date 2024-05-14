@@ -1,11 +1,19 @@
+const { default: axios } = require('axios');
 const express = require('express');
 const CommentService = require('../services/CommentService.js');
 
 const router = express.Router();
 
+const EXTERNAL_API = "https://jsonplaceholder.typicode.com/comments";
+
 router.get('/', (req, res) => {
   const comments = CommentService.getAllComments();
   res.json(comments);
+});
+
+router.get('/external', async (req, res) => {
+  const response = await axios.get(EXTERNAL_API);
+  res.send(response.data);
 });
 
 router.get('/:id', (req, res) => {
